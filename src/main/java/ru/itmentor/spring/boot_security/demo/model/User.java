@@ -18,17 +18,17 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-//    @Column(name = "name")
+    @Column(name = "name")
     @Size(min = 2, max = 50, message = "Name length should from 2 to 50 characters")
     private String name;
 
     @Size(min = 2, message = "Password at least 2 characters")
     private String password;
 
-//    @Column(name = "email")
+    @Column(name = "email")
     private String email;
 
-//    @Column(name = "age")
+    @Column(name = "age")
     @Min(value = 1, message = "Minimal age is 1")
     private int age;
 
@@ -39,12 +39,6 @@ public class User implements UserDetails {
     private List<Role> roleList;
 
     public User (){
-    }
-
-    public User(String name, String email, int age) {
-        this.name = name;
-        this.email = email;
-        this.age = age;
     }
 
     public User(int id, String name, String password, String email, int age, List<Role> roleList) {
