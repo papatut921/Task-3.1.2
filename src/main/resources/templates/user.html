@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>User table</title>
+</head>
+<body>
+<div align="center">
+    <h1>User page</h1>
+    <br/>
+    <table border="1" align="centr" th:object="${user}">
+        <tr>
+            <td>User Name:</td><td th:text="*{name}"></td>
+        </tr>
+        <tr>
+            <td>Mail:</td> <td th:text="*{email}"></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>Age:</td><td th:text="*{age}"></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>Password:</td><td th:text="*{password}"></td>
+        </tr>
+        <tr></tr>
+    </table>
+    <br>
+    <br>
+    <a href="#" th:href="@{/logout}">Log Out</a>
+</div>
+</body>
+</html>
