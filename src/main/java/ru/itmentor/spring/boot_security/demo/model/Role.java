@@ -9,7 +9,9 @@ import java.util.List;
 @Table(name="role")
 public class Role implements GrantedAuthority {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "roleName")
     private String roleName;
 
     public Role(){
